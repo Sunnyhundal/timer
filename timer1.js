@@ -1,13 +1,13 @@
-const input = process.argv.slice(2)
+const input = process.argv.slice(2).filter(input => input >= 0).filter(input => !isNaN(input));
 
-if (input <= 0) {
-  console.log("Please enter a value over 0 seconds");
-  return;
-}if (isNaN(input)) {
-  console.log("Please enter a numarical (integer 1, 2, 3) value");
-  return;
-}
-
+//Commented out more user friendly code, but did not allow for multiple timers
+// if (input <= 0) {
+//   console.log("Please enter a value over 0 seconds");
+//   return;
+// } if (isNaN(input)) {
+//   console.log("Please enter a numarical (integer 1, 2, 3) value");
+//   return;
+// }
 
 input.forEach((time) => {
   setTimeout(() => {
