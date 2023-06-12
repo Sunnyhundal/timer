@@ -12,6 +12,7 @@ const input = process.argv.slice(2).filter(input => input >= 0).filter(input => 
 input.forEach((time) => {
   setTimeout(() => {
     console.log(`Timer of ${time} seconds is complete!!`);
+    //Three system sounds since it only plays a soft sound
     process.stdout.write('\x07');
     process.stdout.write('\x07');
     process.stdout.write('\x07');
